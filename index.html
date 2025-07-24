@@ -1,117 +1,100 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1894.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-    span.s1 {font: 12.0px 'Apple Color Emoji'}
+  <meta charset="UTF-8" />
+  <title>Verificación de Certificados | Alturtec SAS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #003865;
+    }
+
+    input[type="text"] {
+      width: 80%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #003865;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #00509e;
+    }
+
+    .resultado {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    .valido { color: green; }
+    .invalido { color: red; }
   </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="es"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Verificación de Certificados | Alturtec SAS&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: Arial, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #f0f4f8;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 40px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.container {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: white;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 30px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 500px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: auto;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>h1 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #003865;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>input[type="text"] {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 80%;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid #ccc;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>button {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 10px 20px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #003865;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>button:hover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #00509e;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.resultado {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.valido { color: green; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.invalido { color: red; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Verificación de Certificados&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Ingrese su número de documento para consultar su certificado:&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;input type="text" id="documento" placeholder="Ej: 123456789"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;br&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="verificar()"&gt;Consultar&lt;/button&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="resultado" id="resultado"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const certificados = {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>"123456789": {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>nombre: "Juan Pérez",</p>
-<p class="p1"><span class="Apple-converted-space">        </span>curso: "Trabajo Seguro en Alturas",</p>
-<p class="p1"><span class="Apple-converted-space">        </span>fecha: "24 de julio de 2025",</p>
-<p class="p1"><span class="Apple-converted-space">        </span>pdf: "certificado_alturtec.pdf"</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>};</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>function verificar() {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const doc = document.getElementById("documento").value.trim();</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const resultado = document.getElementById("resultado");</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>if (certificados[doc]) {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const cert = certificados[doc];</p>
-<p class="p1"><span class="Apple-converted-space">        </span>resultado.innerHTML = `</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="valido"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;<span class="s1">✅</span> Certificado encontrado&lt;/strong&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;Nombre:&lt;/strong&gt; ${cert.nombre}&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;Curso:&lt;/strong&gt; ${cert.curso}&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;Fecha:&lt;/strong&gt; ${cert.fecha}&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;a href="${cert.pdf}" target="_blank"&gt;<span class="s1">📄</span> Ver/Descargar Certificado&lt;/a&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>`;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>resultado.innerHTML = `&lt;p class="invalido"&gt;<span class="s1">❌</span> No se encontró ningún certificado para el documento ingresado.&lt;/p&gt;`;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+  <div class="container">
+    <h1>Verificación de Certificados</h1>
+    <p>Ingrese su número de documento para consultar su certificado:</p>
+
+    <input type="text" id="documento" placeholder="Ej: 123456789">
+    <br>
+    <button onclick="verificar()">Consultar</button>
+
+    <div class="resultado" id="resultado"></div>
+  </div>
+
+  <script>
+    const certificados = {
+      "123456789": {
+        nombre: "Juan Pérez",
+        curso: "Trabajo Seguro en Alturas",
+        fecha: "24 de julio de 2025",
+        pdf: "certificado_alturtec.pdf"
+      }
+    };
+
+    function verificar() {
+      const doc = document.getElementById("documento").value.trim();
+      const resultado = document.getElementById("resultado");
+
+      if (certificados[doc]) {
+        const cert = certificados[doc];
+        resultado.innerHTML = `
+          <div class="valido">
+            <p><strong>✅ Certificado encontrado</strong></p>
+            <p><strong>Nombre:</strong> ${cert.nombre}</p>
+            <p><strong>Curso:</strong> ${cert.curso}</p>
+            <p><strong>Fecha:</strong> ${cert.fecha}</p>
+            <p><a href="${cert.pdf}" target="_blank">📄 Ver/Descargar Certificado</a></p>
+          </div>
+        `;
+      } else {
+        resultado.innerHTML = `<p class="invalido">❌ No se encontró ningún certificado para el documento ingresado.</p>`;
+      }
+    }
+  </script>
 </body>
 </html>
