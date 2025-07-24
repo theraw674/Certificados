@@ -14,7 +14,7 @@
     .container {
       background: white;
       padding: 30px;
-      max-width: 500px;
+      max-width: 600px;
       margin: auto;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -46,8 +46,14 @@
     }
 
     .resultado {
+      margin-top: 30px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
       margin-top: 20px;
-      font-size: 16px;
     }
 
     .valido { color: green; }
@@ -59,7 +65,7 @@
     <h1>Verificación de Certificados</h1>
     <p>Ingrese su número de documento para consultar su certificado:</p>
 
-    <input type="text" id="documento" placeholder="Ej: 123456789">
+    <input type="text" id="documento" placeholder="Ej: 1075878649">
     <br>
     <button onclick="verificar()">Consultar</button>
 
@@ -69,7 +75,7 @@
   <script>
     const certificados = {
       "1075878649": {
-        nombre: "sebastian villarraga",
+        nombre: "Nombre del Participante",
         curso: "Trabajo Seguro en Alturas",
         fecha: "24 de julio de 2025",
         pdf: "alturas.pdf"
@@ -88,7 +94,7 @@
             <p><strong>Nombre:</strong> ${cert.nombre}</p>
             <p><strong>Curso:</strong> ${cert.curso}</p>
             <p><strong>Fecha:</strong> ${cert.fecha}</p>
-            <p><a href="${cert.pdf}" target="_blank">📄 Ver/Descargar Certificado</a></p>
+            <iframe src="${cert.pdf}"></iframe>
           </div>
         `;
       } else {
